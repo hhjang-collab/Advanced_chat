@@ -21,7 +21,7 @@ def get_base64_of_bin_file(bin_file):
 os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 # 2. 웹페이지 기본 설정 (항상 최상단에 위치)
-st.set_page_config(page_title="소부장 투자지원금 상담 챗봇", page_icon="logo.png", layout="centered")
+st.set_page_config(page_title="국가첨단전략산업 소부장 투자지원금 사업 챗봇", page_icon="logo.png", layout="centered")
 
 # --- 🎨 통합 CSS ---
 st.markdown(
@@ -105,7 +105,7 @@ header_html = f"""
         <h1 style="margin: 0; padding: 0; opacity: 0.85;">소부장 투자지원금 상담 챗봇</h1>
     </div>
     <p style="margin-top: 10px; font-size: 1.05em; opacity: 0.75;">
-        국가첨단산업 소부장 중소·중견기업 투자지원금 사업 공고문, FAQ, 운영 규정을 기반으로 답변해 드립니다.
+        국가첨단전략산업 소부장 투자지원금 사업에 대해 답변해 드립니다.
     </p>
 </div>
 """
@@ -189,8 +189,8 @@ with st.sidebar:
     st.markdown("### 🔗 관련 링크")
     
     # [설정] 관련 공고문 및 웹사이트 다운로드 주소를 아래에 입력하세요
-    notice_url = "https://www.kiat.or.kr" # 예시 주소입니다. 실제 주소로 변경 가능합니다.
-    st.link_button(label="📗 사업 공고문 및 자료실 바로가기", url=notice_url, use_container_width=True)
+    notice_url = "https://www.kiat.or.kr/front/board/boardContentsView.do?contents_id=48e0ef11a6034de4a89139d16738ef33" # 예시 주소입니다. 실제 주소로 변경 가능합니다.
+    st.link_button(label="📗 사업 공고문 바로가기", url=notice_url, use_container_width=True)
 
 # 4. 채팅 루프 (기존 기록 보여주기)
 if "messages" not in st.session_state:
@@ -201,7 +201,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # 5. 사용자 입력창 및 답변 로직
-prompt = st.chat_input("투자지원금 사업에 대해 궁금한 점을 물어보세요!")
+prompt = st.chat_input("궁금한 점을 물어보세요!")
 final_prompt = suggested_prompt or prompt 
 
 if final_prompt:
