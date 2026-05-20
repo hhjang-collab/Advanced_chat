@@ -178,7 +178,7 @@ with st.sidebar:
         suggested_prompt = "지원금 신청 접수 기간은 언제까지이고, 어디서 신청해야 하나요?"
     if st.button("❌ 지원 제외 대상은?", use_container_width=True):
         suggested_prompt = "신청 자격에서 제외되거나 부적격 처리가 되는 기준이 있나요?"
-    if st.button("⚙️ 주요 운영 및 정산 규정은?", use_container_width=True):
+    if st.button("⚙️ 정산 관련 주요 규정은?", use_container_width=True):
         suggested_prompt = "투자지원금의 집행, 정산 및 사후 관리와 관련된 주요 운영 규정 지침은 무엇인가요?"
 
     st.markdown(
