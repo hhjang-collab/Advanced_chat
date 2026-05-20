@@ -102,7 +102,7 @@ header_html = f"""
 <div style="text-align: center; width: 100%;">
     <div style="display: flex; justify-content: center; align-items: center; gap: 15px;">
         {img_html}
-        <h1 style="margin: 0; padding: 0; opacity: 0.85;">국가첨단전략산업 소부장 투자지원금 사업 챗봇</h1>
+        <h1 style="margin: 0; padding: 0; opacity: 0.85;">사업 신청 상담 챗봇</h1>
     </div>
     <p style="margin-top: 10px; font-size: 1.05em; opacity: 0.75;">
         국가첨단전략산업 소부장 투자지원금 사업에 대해 답변해 드립니다.
